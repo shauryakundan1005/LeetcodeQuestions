@@ -6,7 +6,7 @@ class Solution {
 
         for (int i = 2 *( n - 1); i >= 0; i--) {
             int curr = nums[i % n];
-            System.out.println(curr + " "+ i+ " "+(i%n));
+            
 
             while (!stack.isEmpty() && stack.peek() <= curr) {
                 stack.pop();
