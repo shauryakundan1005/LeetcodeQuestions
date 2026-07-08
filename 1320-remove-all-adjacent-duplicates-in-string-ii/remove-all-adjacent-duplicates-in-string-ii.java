@@ -10,7 +10,7 @@ class Solution {
     public String removeDuplicates(String s, int k) {
         int n = s.length();
         Stack<Pair> stack = new Stack<>();
-        String res = "";
+        StringBuilder res = new StringBuilder();
         for(int i=0; i<n; i++){
             char ch = s.charAt(i);
 
@@ -27,11 +27,10 @@ class Solution {
         while(!stack.isEmpty()){
             Pair top = stack.pop();
             int freq = top.freq;
-            while(freq!=0){
-                res = top.ch +res;
-                freq--;
+            while(freq-- > 0){
+                res.append(top.ch);
             }
         }
-        return res;
+        return res.reverse().toString();
     }
 }
