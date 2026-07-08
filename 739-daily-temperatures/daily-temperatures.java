@@ -11,7 +11,7 @@ class Solution {
                 if(stack.isEmpty()){
                     res[i] = 0;
                 } else {
-                    res[i] = stack.peek()-i>0? stack.peek()-i: 0;
+                    res[i] = stack.peek()-i;
                 }
         
             stack.push(i);
