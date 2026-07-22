@@ -6,15 +6,14 @@ class Solution {
         for(int i = 0; i<k; i++){
             windowSum += nums[i];
         }
-        max = (double)windowSum/k;
+        max = windowSum;
         int low=0;
         for(int high=k; high<n; high++){
             windowSum -= nums[low];
             low++;
             windowSum += nums[high];
-            double avg = (double)windowSum/k;
-            max = Math.max(max, avg);
+            max = Math.max(max, windowSum);
         }
-        return max;
+        return (double) max/k;
     }
 }
