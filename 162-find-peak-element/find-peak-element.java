@@ -12,6 +12,6 @@ class Solution {
                 high= guess;
             }
         }
-        return low;
+        return high;
     }
 }
