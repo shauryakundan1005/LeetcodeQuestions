@@ -12,12 +12,12 @@ class Solution {
     public int getDecimalValue(ListNode head) {
         if(head == null){ return 0;}
         ListNode temp = head;
-        StringBuilder sb = new StringBuilder();
+        String binary = "";
         while(temp!= null){
-            sb.append(temp.val);
+            binary = binary + temp.val;
             temp = temp.next;
         }
-        int num = Integer.parseInt(sb.toString(), 2);
+        int num = Integer.parseInt(binary, 2);
         return num;
     }
 }
